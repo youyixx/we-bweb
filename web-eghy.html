@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右布局示例</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .left {
+            flex: 3;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+        }
+        .right button {
+            margin: 40px; /* 按钮之间的距离扩大两倍 */
+            padding: 20px 40px; /* 按钮大小扩大两倍 */
+            font-size: 32px; /* 字体大小扩大两倍 */
+            border: 3px solid blue; /* 边框加粗并改为蓝色 */
+            border-radius: 10px; /* 边框圆角 */
+            transition: transform 0.3s, background-color 0.3s; /* 添加过渡效果 */
+        }
+        .right button:hover {
+            transform: scale(2); /* 鼠标悬停时按钮扩大1倍 */
+            background-color: yellow; /* 鼠标悬停时背景颜色变成黄色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <h1>左区域</h1>
+        <p>这里是左区域的内容。</p>
+    </div>
+    <div class="right">
+        <button>按钮1</button>
+        <button>按钮2</button>
+        <button>按钮3</button>
+    </div>
+</body>
+</html>
